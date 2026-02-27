@@ -1,0 +1,31 @@
+:root { --max: 980px; --gap: 16px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Arial; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 24px; }
+
+header.container { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.logo { font-weight: 800; font-size: 20px; }
+.tag { opacity: .75; font-size: 14px; margin-top: 4px; }
+.nav a { margin-left: 12px; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; }
+
+.hero h1 { margin: 18px 0 8px; font-size: 36px; }
+.lead { opacity: .85; margin: 0 0 16px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap); }
+.card { border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 16px; }
+.card:hover { background: rgba(0,0,0,.04); }
+
+.section { margin-top: 36px; }
+.list { padding-left: 18px; }
+
+.footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,.12); display: flex; gap: 10px; align-items: center; }
+.dot { opacity: .6; }
+
+@media (prefers-color-scheme: dark){
+  body { background:#0f1115; color:#e7e7e7; }
+  .card { border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.04); }
+  .footer { border-top-color: rgba(255,255,255,.14); }
+}
