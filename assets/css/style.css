@@ -230,4 +230,50 @@ header.container{
   .container{ padding: 18px; }
   .nav{ gap: 8px; }
   .nav a{ padding: 9px 10px; }
+}/* ========== 1) 微光渐变身份分区 ========== */
+.cred{
+  position: relative;
+  margin: 18px 0 10px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+}
+
+.cred__inner{
+  position: relative;
+  padding: 14px 16px 12px;
+}
+
+.cred__glow{
+  position: absolute;
+  inset: -60px -120px;
+  background:
+    radial-gradient(closest-side at 25% 40%, rgba(125, 255, 214, .14), transparent 55%),
+    radial-gradient(closest-side at 70% 55%, rgba(120, 180, 255, .12), transparent 60%),
+    radial-gradient(closest-side at 50% 70%, rgba(255, 255, 255, .06), transparent 60%);
+  filter: blur(14px);
+  transform: translateZ(0);
+  animation: breatheGlow 7.5s ease-in-out infinite;
+  opacity: .9;
+}
+
+.cred__note{
+  margin: 10px 0 0;
+  opacity: .78;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* 超细“呼吸”动画：幅度小、速度慢 */
+@keyframes breatheGlow{
+  0%   { transform: translate3d(0,0,0) scale(1);   opacity: .82; }
+  50%  { transform: translate3d(0,-6px,0) scale(1.02); opacity: .98; }
+  100% { transform: translate3d(0,0,0) scale(1);   opacity: .82; }
+}
+
+/* 小屏更克制 */
+@media (max-width: 520px){
+  .cred__inner{ padding: 12px 14px 10px; }
+  .cred__note{ font-size: 13px; }
 }
