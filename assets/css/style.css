@@ -294,4 +294,73 @@ header.container{
   cursor: pointer;
   font-size: 14px;
   margin-top: 10px;
+}/* 背景和文本色调优化 */
+.cred {
+    background: linear-gradient(135deg, rgba(34, 193, 195, 0.6), rgba(253, 187, 45, 0.6)); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.cred__inner {
+    color: #fff;
+    text-align: center;
+}
+
+/* 让身份标签更显眼，添加圆角、微光和阴影效果 */
+.pills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.pill {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pill:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 增加按钮的设计感 */
+button.toggle-button,
+button#show-credentials {
+    background-color: #42a5f5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button.toggle-button:hover,
+button#show-credentials:hover {
+    background-color: #1e88e5;
+}
+
+/* 鼠标悬浮在按钮上时效果 */
+button:active {
+    transform: scale(0.98);
+}
+
+/* 文本样式优化 */
+.cred__note {
+    color: #f1f1f1;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
 }
