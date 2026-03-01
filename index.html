@@ -46,14 +46,25 @@
      <section class="cred">
   <div class="cred__glow"></div>
   <div class="cred__inner">
-    <div class="pills">
+     <div class="pills">
+      <!-- 只显示前两个身份 -->
       <span class="pill">注册营养师</span>
       <span class="pill">临床营养师</span>
-      <span class="pill">妇产科主治医师</span>
-      <span class="pill">执业药师</span>
+
+      <!-- 隐藏的更多身份 -->
+      <span class="more-credentials">
+        <span class="pill">妇产科主治医师</span>
+        <span class="pill">执业药师</span>
+      </span>
     </div>
-    <p class="cred__note">从营养评估到临床判断，从用药风险到女性健康阶段，构建更稳妥的决策路径。</p>
+    <!-- 显示更多按钮 -->
+<button class="toggle-button">查看更多</button>
   </div>
+  <!-- 展开/收起按钮 -->
+  <div class="show-more">
+    <button id="show-credentials">查看更多</button>
+  </div>
+  <p class="cred__note">从营养评估到临床判断，从药用风险到女性健康阶段，构建更稳妥的决策路径。</p>
 </section>
 
       <div class="cards">
@@ -99,6 +110,34 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+<script>
+  // 获取身份相关部分
+  const credentials = document.querySelector('.pills');
 
+  // 显示或隐藏身份
+  let showMore = false;
+
+  // 按钮事件
+  const toggleButton = document.querySelector('.toggle-button');
+  
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      showMore = !showMore;
+      updateCredentials();
+    });
+  }
+
+  // 更新身份显示内容
+  function updateCredentials() {
+    const allCredentials = credentials.querySelectorAll('span');
+    allCredentials.forEach((cred, index) => {
+      if (index >= 2 && !showMore) {
+        cred.style.display = 'none'; // 隐藏超过2个的身份
+      } else {
+        cred.style.display = 'inline-block'; // 显示所有身份
+      }
+    });
+  }
+</script>
 </body>
 </html>

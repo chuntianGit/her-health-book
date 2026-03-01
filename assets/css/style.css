@@ -276,4 +276,22 @@ header.container{
 @media (max-width: 520px){
   .cred__inner{ padding: 12px 14px 10px; }
   .cred__note{ font-size: 13px; }
+}/* 控制更多身份的显示与隐藏 */
+.more-credentials {
+  display: none;
+}
+
+/* 展开后显示 */
+.show-more.open .more-credentials {
+  display: inline-block;
+}
+
+/* 按钮样式 */
+.show-more button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
 }
