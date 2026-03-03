@@ -45,7 +45,6 @@
 
      <section class="cred">
   <div class="cred__glow"></div>
-
   <div class="cred__inner">
     <div class="pills" aria-label="credentials">
       <span class="pill">注册营养师</span>
@@ -100,25 +99,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-<script>
-  // 获取身份相关部分
-  const credentials = document.querySelector('.pills');
-
-  // 显示或隐藏身份
-  let showMore = false;
-
-  // 按钮事件
-  const toggleButton = document.querySelector('.toggle-button');
   
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      showMore = !showMore;
-      updateCredentials();
-    });
-  }
 
  <script>
   document.getElementById("y").textContent =

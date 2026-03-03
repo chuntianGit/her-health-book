@@ -463,4 +463,45 @@ button:active {
     font-size: 15px;
   }
   .cred__note{ text-align: left; }
+}/* ===== Cred pills polish (all show, responsive) ===== */
+.cred__inner{
+  overflow: hidden;
+}
+
+.pills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0 2px;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  line-height: 1;
+  font-weight: 600;
+
+  /* 关键：防止手机端断字变“竖排” */
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+@media (max-width: 520px){
+  .pills{
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .pill{
+    padding: 10px 14px;
+    font-size: 14px;
+
+    /* 让 4 个更像“2×2”自然换行 */
+    flex: 0 0 auto;
+  }
 }
