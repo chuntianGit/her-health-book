@@ -387,4 +387,80 @@ button:active {
     font-size: 15px;
     padding: 0 8px;
   }
+}/* =========================
+   Credentials (身份区) 优化
+   ========================= */
+.cred{
+  position: relative;
+  margin-top: 18px;
+}
+
+.cred__glow{
+  position:absolute;
+  inset:-8px;
+  border-radius: 22px;
+  background:
+    radial-gradient(600px 220px at 15% 25%, rgba(72,255,213,.18), transparent 60%),
+    radial-gradient(520px 240px at 85% 35%, rgba(255,210,77,.16), transparent 60%);
+  filter: blur(10px);
+  opacity: .9;
+  pointer-events: none;
+}
+
+.cred__inner{
+  position: relative;
+  border-radius: 22px;
+  padding: 22px 22px 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: linear-gradient(90deg, rgba(26,167,164,.38), rgba(193,142,30,.34));
+  box-shadow: 0 16px 50px rgba(0,0,0,.35);
+}
+
+.pills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0 14px;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;          /* 关键：防止手机端竖排拆字 */
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.cred__note{
+  margin: 6px 0 0;
+  text-align: center;
+  opacity: .9;
+  line-height: 1.75;
+}
+
+/* 手机端：不挤压、不竖排，必要时横向滑动 */
+@media (max-width: 520px){
+  .cred__inner{ padding: 18px 16px 14px; }
+  .pills{
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .pill{
+    flex: 0 0 auto;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  .cred__note{ text-align: left; }
 }

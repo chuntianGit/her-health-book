@@ -45,15 +45,19 @@
 
      <section class="cred">
   <div class="cred__glow"></div>
+
   <div class="cred__inner">
-     <div class="pills">
-       <!-- 显示所有身份 -->
-            <span class="pill">注册营养师</span>
-            <span class="pill">临床营养师</span>
-            <span class="pill">妇产科主治医师</span>
-            <span class="pill">执业药师</span>
-        </div>
-  <p class="cred__note">从营养评估到临床判断，从药用风险到女性健康阶段，构建更稳妥的决策路径。</p>
+    <div class="pills" aria-label="credentials">
+      <span class="pill">注册营养师</span>
+      <span class="pill">临床营养师</span>
+      <span class="pill">妇产科主治医师</span>
+      <span class="pill">执业药师</span>
+    </div>
+
+    <p class="cred__note">
+      从营养评估到临床判断，从药用风险到女性健康阶段，构建更稳妥的决策路径。
+    </p>
+  </div>
 </section>
 
       <div class="cards">
@@ -116,17 +120,9 @@
     });
   }
 
-  // 更新身份显示内容
-  function updateCredentials() {
-    const allCredentials = credentials.querySelectorAll('span');
-    allCredentials.forEach((cred, index) => {
-      if (index >= 2 && !showMore) {
-        cred.style.display = 'none'; // 隐藏超过2个的身份
-      } else {
-        cred.style.display = 'inline-block'; // 显示所有身份
-      }
-    });
-  }
+ <script>
+  document.getElementById("y").textContent =
+    new Date().getFullYear();
 </script>
 </body>
 </html>
