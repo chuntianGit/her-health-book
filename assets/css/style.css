@@ -372,3 +372,113 @@ header.container{
 #show-credentials{
   display: none !important;
 }
+/* =========================
+   Mobile polish (Pro)
+   Paste at END of style.css
+   ========================= */
+@media (max-width: 520px) {
+
+  /* 整体阅读更松弛 */
+  body {
+    line-height: 1.6;
+  }
+
+  /* 顶部容器留白更舒服（不抢内容） */
+  header.container,
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Hero 文案：更“高级”的字距与行距 */
+  h1, .hero h1 {
+    letter-spacing: 0.2px;
+    line-height: 1.08;
+  }
+
+  .hero p,
+  .lead,
+  .subtitle {
+    line-height: 1.65;
+    opacity: 0.92;
+  }
+
+  /* 大渐变卡片：减少拥挤感 + 更像“主视觉卡片” */
+  .cred {
+    margin-top: 16px;
+  }
+
+  .cred__inner {
+    padding: 18px 16px 16px;
+    border-radius: 18px;
+    /* 轻微的玻璃质感：更精致 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* 按钮区：2×2 排列更稳定 + 间距更像设计稿 */
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 12px;           /* 行/列间距 */
+    justify-content: flex-start;
+    margin: 12px 0 14px;
+  }
+
+  /* 每个按钮：更轻盈、更高级，不显“厚重挤” */
+  .pill {
+    flex: 1 1 calc(50% - 6px); /* 两列 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+
+    border-radius: 999px;
+    /* 轻一点的边/底色，避免“灰块压住” */
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.08);
+    box-shadow:
+      0 8px 18px rgba(0,0,0,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 按钮按下反馈：更“像产品” */
+  .pill:active {
+    transform: translateY(1px);
+  }
+
+  /* 卡片内那段说明文字：更好读，别顶着边 */
+  .cred__inner p,
+  .cred__inner .desc,
+  .cred__inner .note {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  /* 下方三张入口卡片（判断卡/读文献/小工具）：减少挤压 */
+  .cards,
+  .grid,
+  .home-grid {
+    gap: 14px;
+  }
+
+  .card,
+  .panel,
+  .home-card {
+    border-radius: 18px;
+  }
+
+  .card h3,
+  .panel h3,
+  .home-card h3 {
+    letter-spacing: 0.2px;
+  }
+}
