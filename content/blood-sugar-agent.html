@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Sugar Agent | 她的健康书</title>
+  <style>
+    body {
+      font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      background: #faf8f4;
+      color: #2f2a26;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .hero {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      color: #2a211b;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      margin-top: 36px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #5f5349;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #7b4b2a;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 999px;
+      margin-right: 12px;
+      margin-top: 8px;
+    }
+
+    .btn-secondary {
+      background: #efe7de;
+      color: #5a4637;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .notice {
+      background: #fff7ef;
+      border-left: 4px solid #c48a57;
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #7b4b2a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">← 返回首页</a>
+
+    <section class="hero">
+      <h1>Blood Sugar Agent｜把饭后困、暴饿、空腹偏高，整理成更清楚的判断路径</h1>
+      <p class="subtitle">
+        先帮你看时间点、饮食搭配和最近状态，再给出更容易执行的 7 天调整方向。
+      </p>
+      <a class="btn" href="#input">开始输入我的情况</a>
+      <a class="btn btn-secondary" href="#guide">查看使用说明</a>
+    </section>
+
+    <section class="section">
+      <h2>这是什么</h2>
+      <p>
+        Blood Sugar Agent 是一个血糖相关体验的初步判断工具雏形。
+        它不会直接替你做医疗诊断，而是帮你把饭后困、暴饿、空腹偏高这些零散体验先理顺。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>适合谁用</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>饭后容易困</h3>
+          <p>吃完没多久就昏沉、想睡，想先看看问题出在哪。</p>
+        </div>
+        <div class="card">
+          <h3>下午很快暴饿</h3>
+          <p>饭后 3–6 小时很快又饿、想甜，想知道怎么先调一调。</p>
+        </div>
+        <div class="card">
+          <h3>空腹偏高想先理清方向</h3>
+          <p>发现空腹偏高，想先从饮食和生活方式角度梳理。</p>
+        </div>
+        <div class="card">
+          <h3>想把问题先说清楚</h3>
+          <p>不急着下结论，先理顺自己的情况，再看最值得先改什么。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="input">
+      <h2>你需要输入什么</h2>
+      <div class="card-grid">
+        <div class="card"><h3>1｜你最想解决的是什么</h3><p>例如：饭后困 / 下午暴饿 / 空腹偏高</p></div>
+        <div class="card"><h3>2｜发生时间点</h3><p>例如：餐后 2 小时内 / 餐后 3–6 小时 / 夜间或清晨</p></div>
+        <div class="card"><h3>3｜那顿吃了什么</h3><p>例如：主食多少、有没有甜饮、油重不重、蛋白质和蔬菜够不够</p></div>
+        <div class="card"><h3>4｜当时感受</h3><p>例如：困、口渴、想甜、很快又饿、心慌、手抖、头晕</p></div>
+        <div class="card"><h3>5｜最近一周状态</h3><p>例如：睡眠、压力、久坐、运动、吃饭速度</p></div>
+        <div class="card"><h3>6｜如果你有数据</h3><p>例如：空腹血糖、餐后 2h、HbA1c、CGM 描述</p></div>
+      </div>
+      <section class="section">
+  <h2>输入模板（可直接照着填）</h2>
+  <p style="margin-bottom: 16px; color: #6b5b4d;">
+  你可以直接在下面填写自己的情况；没有数据也可以先填时间点、饮食搭配和最近状态。
+</p>
+    <div class="card" style="padding: 24px;">
+    <textarea style="width: 100%; min-height: 520px; border: none; outline: none; resize: vertical; font-size: 18px; line-height: 1.8; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #2f2a26; background: transparent;">我想解决：饭后困 / 下午暴饿 / 空腹偏高
+
+发生时间点：餐后2小时内 / 餐后3–6小时 / 夜间或清晨
+
+那顿吃了什么：
+主食：
+甜饮/甜品：
+油脂情况：
+蛋白质和蔬菜情况：
+
+当时感受：困 / 口渴 / 想甜 / 很快又饿 / 心慌 / 手抖 / 头晕 / 其他
+
+最近一周：
+睡眠：
+压力：
+运动：
+久坐：
+吃饭速度：
+
+如果你有数据（没有也可以）：
+空腹血糖：
+餐后2小时：
+HbA1c：
+CGM（如有）：
+
+我最困扰的一点是：</textarea>
+  </div>
+    </section>
+
+    <section class="section" id="guide">
+      <h2>当前支持的场景</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>餐后 2 小时内型</h3>
+          <p>饭后困、口渴、昏沉。</p>
+        </div>
+        <div class="card">
+          <h3>餐后 3–6 小时延迟型</h3>
+          <p>下午暴饿、想甜，像是“先顶得快，后面又饿得快”。</p>
+        </div>
+        <div class="card">
+          <h3>夜间 / 清晨型</h3>
+          <p>夜里容易饿醒、空腹偏高，想知道晚饭和夜间习惯有没有影响。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section notice">
+      <h2>风险边界 / 提醒</h2>
+      <p>这个工具不替代医生诊断，也不做药物建议或急症处理。</p>
+      <p>
+        如果你已经有明确糖代谢异常、正在用药、孕期相关血糖问题，
+        或经常出现明显心慌、手抖、头晕、反复加重等情况，
+        更建议进一步就医或咨询医生/营养师。
+      </p>
+    </section>
+  </div>
+</body>
+</html>
