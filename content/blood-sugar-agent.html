@@ -167,7 +167,7 @@
   你可以直接在下面填写自己的情况；没有数据也可以先填时间点、饮食搭配和最近状态。
 </p>
     <div class="card" style="padding: 24px;">
-    <textarea style="width: 100%; min-height: 520px; border: none; outline: none; resize: vertical; font-size: 18px; line-height: 1.8; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #2f2a26; background: transparent;">我想解决：饭后困 / 下午暴饿 / 空腹偏高
+    <textarea id="bloodSugarInput" style="width: 100%; min-height: 420px; border: none; outline: none; resize: vertical; font-size: 18px; line-height: 1.8; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #2f2a26; background: transparent;">我想解决：饭后困 / 下午暴饿 / 空腹偏高
 
 发生时间点：餐后2小时内 / 餐后3–6小时 / 夜间或清晨
 
@@ -193,7 +193,17 @@ HbA1c：
 CGM（如有）：
 
 我最困扰的一点是：</textarea>
+<div style="margin-top: 16px;">
+  <button onclick="copyBloodSugarTemplate()" style="background: #7b4b2a; color: #fff; border: none; padding: 12px 20px; border-radius: 999px; font-size: 16px; cursor: pointer;">
+    复制我的情况
+  </button>
+  <p id="copyMessage" style="margin-top: 10px; color: #6b5b4d; display: none;">
+    已复制，可以直接粘贴发送。
+  </p>
+</div>
+
   </div>
+  
     </section>
 
     <section class="section" id="guide">
@@ -224,5 +234,23 @@ CGM（如有）：
       </p>
     </section>
   </div>
+  <script>
+  function copyBloodSugarTemplate() {
+    const textarea = document.getElementById("bloodSugarInput");
+    const message = document.getElementById("copyMessage");
+
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+
+    try {
+      document.execCommand("copy");
+      message.style.display = "block";
+      message.textContent = "已复制，可以直接粘贴发送。";
+    } catch (err) {
+      message.style.display = "block";
+      message.textContent = "复制失败，请手动长按或 Ctrl+C 复制。";
+    }
+  }
+</script>
 </body>
 </html>
